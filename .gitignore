@@ -1,5 +1,6 @@
 # Dependency directories
 node_modules/
+npm-debug.log*
 
 # Optional npm cache directory
 .npm
@@ -36,9 +37,30 @@ bower_components/
 
 # OS-specific files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # Build directories
 build/
 dist/
+
+# Logs
+logs/
+*.log
+
+
+
+
+
 
