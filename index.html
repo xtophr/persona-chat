@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning & Development Training Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="simulation-container">
+        <div class="scenario-panel">
+            <h2>🎭 Training Scenarios</h2>
+            <div id="scenarioList">
+                <!-- Scenarios will be loaded here -->
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-header">
+                <div id="chatTitle">Learning & Development Training</div>
+            </div>
+            
+            <div class="chat-status" id="chatStatus" style="display: none;">
+                <!-- Status information will appear here -->
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="system-message">
+                    Welcome to the Learning & Development Simulation Platform! 
+                    <br><br>
+                    <strong>How it works:</strong><br>
+                    • Choose a training scenario from the left panel<br>
+                    • The character will present you with realistic situations<br>
+                    • You respond as if you're in that professional role<br>
+                    • Practice your communication and problem-solving skills<br>
+                    • Get detailed feedback and ratings when complete
+                </div>
+            </div>
+            
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container" style="display: none;" id="inputContainer">
+                <div class="chat-input-wrapper">
+                    <textarea 
+                        id="chatInput" 
+                        class="chat-input" 
+                        placeholder="Type your professional response..."
+                        rows="1"
+                    ></textarea>
+                    <button id="sendButton" class="send-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                    <button id="endButton" class="end-simulation-button" style="display: none;">
+                        End & Evaluate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Evaluation Modal -->
+    <div class="evaluation-modal" id="evaluationModal">
+        <div class="evaluation-content">
+            <div class="evaluation-header">
+                <h2>📊 Simulation Evaluation</h2>
+                <div class="star-rating" id="overallRating"></div>
+            </div>
+            <div id="evaluationDetails">
+                <!-- Evaluation content will be loaded here -->
+            </div>
+            <button class="close-modal" onclick="closeEvaluation()">
+                Start New Simulation
+            </button>
+        </div>
+    </div>
+
+    <!-- Version Footer -->
+    <div class="version-footer">v3.0.0</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
